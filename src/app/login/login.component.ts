@@ -24,25 +24,49 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(){
-    var acno=this.acno
-    var pswd=this.pswd
-    let userDetails=this.userDetails
-    if(acno in userDetails){
-      if(pswd==userDetails[acno]['password']){
-          alert('login success')
+  // login(){
+  // //   var acno=this.acno
+  // //   var pswd=this.pswd
+  // //   let userDetails=this.userDetails
+  // //   if(acno in userDetails){
+  // //     if(pswd==userDetails[acno]['password']){
+  // //         alert('login success')
 
+  // //     }
+  // //     else{
+  // //       alert('incorrect password')
+  // //     }
+  // //   }
+  // //   else{
+  // //     alert('user not exist or incorrect password')
+  // //   }
+
+  // //   alert("clicked")
+  // // }
+  login(a:any,b:any){
+    // console.log(a.value);
+    // console.log(b.value);
+    
+    
+      var acno=a.value
+      var pswd=b.value
+      let userDetails=this.userDetails
+      if(acno in userDetails){
+        if(pswd==userDetails[acno]['password']){
+            alert('login success')
+  
+        }
+        else{
+          alert('incorrect password')
+        }
       }
       else{
-        alert('incorrect password')
+        alert('user not exist ')
       }
-    }
-    else{
-      alert('user not exist or incorrect password')
+  
+      alert("clicked")
     }
 
-    alert("clicked")
-  }
  acnoChange(event:any){
     this.acno=event.target.value
     console.log(this.acno);

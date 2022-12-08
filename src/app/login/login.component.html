@@ -2,13 +2,13 @@
     <h5 class="text-center text-success">{{aim}}</h5>
     <h1 class="text-center text-white">Login Page</h1>
     <div class="mt-2 p-2">
-        <input type="text"  class="form-control" (change)="acnoChange($event)" [placeholder]="acnt" id="acid">
+        <input type="text"  class="form-control" #acno [placeholder]="acnt" id="acid">
     </div>
     <div class="mt-2 p-2">
-        <input type="password" placeholder="Password" (change)="changePswd($event)" class="form-control" id="pid">
+        <input type="password" placeholder="Password" #pswd class="form-control" id="pid">
     </div>
     <div class="text-center mt-2 p-2">
-        <button type="button" (click)="login()"class="btn btn-success">Login</button><br><br>
+        <button type="button" (click)="login(acno,pswd)"class="btn btn-success">Login</button><br><br>
         <p class="text-white">New User? <a href="" style="text-decoration:none;" class="text-info">Register</a></p>
     </div>
 </div>
