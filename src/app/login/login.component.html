@@ -1,14 +1,16 @@
  <div class="container w-25  border mt-5 p-3" style="background: rgba(112, 112, 112, 0.416);border-radius: 20px;">
     <h5 class="text-center text-success">{{aim}}</h5>
     <h1 class="text-center text-white">Login Page</h1>
+    <form (ngSubmit)="login()">
     <div class="mt-2 p-2">
-        <input type="text"  class="form-control" #acno [placeholder]="acnt" id="acid">
+        <input name="acno" type="text"  class="form-control"[placeholder]="acnt" [(ngModel)]="acno" id="acid">
     </div>
     <div class="mt-2 p-2">
-        <input type="password" placeholder="Password" #pswd class="form-control" id="pid">
+        <input name="pswd" type="password" placeholder="Password" class="form-control" [(ngModel)]="pswd" id="pid">
     </div>
     <div class="text-center mt-2 p-2">
-        <button type="button" (click)="login(acno,pswd)"class="btn btn-success">Login</button><br><br>
-        <p class="text-white">New User? <a href="" style="text-decoration:none;" class="text-info">Register</a></p>
+        <button type="submit" class="btn btn-success">Login</button><br><br>
+        <p class="text-white">New User? <a href="" routerLink="register" style="text-decoration:none;" class="text-info">Register</a></p>
     </div>
+</form>
 </div>

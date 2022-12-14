@@ -1,0 +1,38 @@
+
+
+                 html to ts
+                 view to component
+
+  1.one by one binding(one way binding)
+        1.1 component to view
+           1.1.1 string interpolation - {{}}
+           1.1.2 property binding     - [prperty]="value"
+
+        1.2 view to component
+           1.2.1 event binding         -(event name)="functionname()"
+           1.2.2 event binding using $event   - (event name)="functionname($event)"
+           1.2.3 event binding using template rendering variable - #variable_name
+
+
+  2.two way binding
+        2.1 ngModel    - FormsModule
+
+    ............................................
+
+    redirection in ts
+
+    method - navigateByUrl  -  Router class method
+
+    Dependency injection     - data sharing b/w two dependent classes      
+
+    Angulr services - to store redendent database
+
+    ng g s service_name       
+
+
+    Validating inputs
+
+    -Angular Form Validation
+
+       1.template driven form
+       2.model driven form

@@ -1,0 +1,22 @@
+
+    <div class="container w-25  border mt-5 p-3" style="background: rgba(105, 106, 104, 0.398);border-radius: 20px;">
+
+        <!-- <h5 class="text-center text-success">{{aim}}</h5> -->
+
+    <h1 class="text-center text-white">Register Page</h1>
+    <form (ngSubmit)="register()"><div class="mt-2 p-2">
+        <input type="username"  class="form-control"placeholder="enter usernme" [(ngModel)]="uname" id="unme">
+    </div>
+    <div class="mt-2 p-2">
+    <input type="acno"  class="form-control"placeholder="enter acno" [(ngModel)]="acno" id="ano">
+</div>
+    <div class="mt-2 p-2">
+        <input type="password" placeholder=" enter Password" class="form-control" [(ngModel)]="pswd" id="psd">
+    </div>
+    <div class="text-center mt-2 p-2">
+        <button type="submit"class="btn btn-success">Register</button><br><br>
+        <!-- <p class="text-white">New User? <a href="" routerLink="'register" style="text-decoration:none;" class="text-info">Register</a></p> -->
+
+    </div>
+</form>
+</div>
